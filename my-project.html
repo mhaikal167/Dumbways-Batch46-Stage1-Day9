@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" text="text/css" href="assets/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Project</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="./assets/images/logo.png" alt="logo" />
+      </div>
+      <ul class="nav-left" id="navbar"></ul>
+      <ul class="nav-right">
+        <li>
+          <a href="contact-me.html">Contact Me</a>
+        </li>
+      </ul>
+      <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div class="myproject-form">
+      <form onsubmit="getProject(event)">
+        <h1>Add My Project</h1>
+        <div>
+          <label>Project Name</label>
+          <input
+            type="text"
+            id="project-name"
+            placeholder="Enter the Project Name"
+            required
+          />
+        </div>
+        <div class="input-date">
+          <div>
+            <label>Start Date</label>
+            <input class="date" type="date" id="project-start" required />
+          </div>
+          <div>
+            <label>End Date</label>
+            <input class="date" type="date" id="project-end" required />
+          </div>
+        </div>
+        <div>
+          <label>Description</label>
+          <textarea
+            id="project-desc"
+            placeholder="Enter Description not more than 20 word"
+            required
+          ></textarea>
+        </div>
+        <div class="input-checkbox">
+          <label>Technologies</label>
+          <div>
+            <div>
+              <input type="checkbox" value="Node" id="node" />
+              <p style="color: green">Node Js</p>
+            </div>
+            <div>
+              <input type="checkbox" value="React" id="react" />
+              <p style="color: #61dbfb">React Js</p>
+            </div>
+          </div>
+          <div class="checkbox-right">
+            <div>
+              <input type="checkbox" value="Next" id="next" />
+              <p>Next Js</p>
+            </div>
+            <div>
+              <input type="checkbox" value="TypeScript" id="typescript" />
+              <p style="color: #007acc">TypeScript</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-upload">
+          <label>Upload Image</label>
+          <input
+            style="background-color: #dbdbdb"
+            type="file"
+            id="img-file"
+            required
+          />
+        </div>
+        <div class="submit">
+          <button>Submit</button>
+        </div>
+        <hr />
+      </form>
+    </div>
+    <div class="myproject-list">
+      <h2>My Project</h2>
+      <div class="myproject-cardlist" id="project-list"></div>
+    </div>
+    <script src="assets/js/my-project.js"></script>
+    <script src="assets/js/nav.js"></script>
+  </body>
+</html>

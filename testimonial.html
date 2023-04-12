@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>My Testimonials</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="./assets/images/logo.png" alt="logo" />
+      </div>
+      <ul class="nav-left" id="navbar"></ul>
+      <ul class="nav-right">
+        <li>
+          <a href="contact-me.html">Contact Me</a>
+        </li>
+      </ul>
+      <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div class="testi-container">
+      <h1>My Testimonials</h1>
+      <h2 style="text-align: center; color: #fe4e30; margin-top: 20px;">Rating by Stars</h2>
+      <div class="rating-btn">
+        <button onclick="getAllTestimonial()">All</button>
+        <button onclick="filterRating(1)"><i class="fa-solid fa-star"></i>1</button>
+        <button onclick="filterRating(2)"><i class="fa-solid fa-star"></i>2</button>
+        <button onclick="filterRating(3)"><i class="fa-solid fa-star"></i>3</button>
+        <button onclick="filterRating(4)"><i class="fa-solid fa-star"></i>4</button>
+        <button onclick="filterRating(5)"><i class="fa-solid fa-star"></i>5</button>
+      </div>
+      <div class="testi-list" id="testimonials"></div>
+    </div>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/ajax.js"></script>
+  </body>
+</html>
